@@ -129,7 +129,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/img/gradient.png) center no-repeat;
+    background: url('/img/gradient.png') center no-repeat;
     background-size: 400%;
     transform: translate(0, 0);
 }
@@ -426,7 +426,7 @@
     padding: 15px;
     cursor: pointer;
     color: var(--accent-color);
-    background: url(/img/icon-plus.png) 97% center no-repeat;
+    background: url('/img/icon-plus.png') 97% center no-repeat;
     background-size: 4%;
     border-radius: 10px;
     border: 1px solid #DCDDDE;
