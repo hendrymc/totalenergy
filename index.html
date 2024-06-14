@@ -3,75 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Total Energy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
-
-
-    <script src="https://cdn.auth0.com/js/auth0/9.13/auth0.min.js"></script>
-    <script>
-        var webAuth = new auth0.WebAuth({
-            domain: 'dev-7rmagckfju8054vz.us.auth0.com',
-            clientID: 'RFoRytvKAXqr0Q6pkIhnbHy78ykmRYIq'
-        });
-
-        function login() {
-            webAuth.authorize({
-                redirectUri: window.location.href,
-                responseType: 'token id_token',
-                scope: 'openid profile'
-            });
-        }
-
-        function handleAuthentication() {
-            webAuth.parseHash(function(err, authResult) {
-                if (authResult && authResult.accessToken && authResult.idToken) {
-                    window.location.hash = '';
-                    setSession(authResult);
-                } else if (err) {
-                    console.log(err);
-                    alert('Error: ' + err.error + '. Check the console for further details.');
-                }
-            });
-        }
-
-        function setSession(authResult) {
-            var expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
-            localStorage.setItem('access_token', authResult.accessToken);
-            localStorage.setItem('id_token', authResult.idToken);
-            localStorage.setItem('expires_at', expiresAt);
-            displayContent();
-        }
-
-        function isAuthenticated() {
-            var expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-            return new Date().getTime() < expiresAt;
-        }
-
-        function displayContent() {
-            if (isAuthenticated()) {
-                document.getElementById("content").style.display = "block";
-                document.getElementById("login").style.display = "none";
-            } else {
-                document.getElementById("content").style.display = "none";
-                document.getElementById("login").style.display = "block";
-            }
-        }
-
-        window.onload = function() {
-            handleAuthentication();
-            displayContent();
-        };
-    </script>
 </head>
 
 <body>
