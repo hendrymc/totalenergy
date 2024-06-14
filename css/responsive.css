@@ -6,7 +6,7 @@
         padding: 1rem 0;
     }
     .logo img {
-        max-width: none;
+        max-width: 6.25rem;
     }
     .hero {
         background: url('/img/hero.jpg') center right no-repeat;
@@ -27,19 +27,19 @@
     .steps-block {
         flex-direction: row;
         margin: 0 auto;
-        gap: 90px;
+        gap: 5.625rem;
     }
     .section-title h2 {
-        font-size: 54px;
+        font-size: 3.375rem;
     }
     .form br {
         display: inline;
     }
     .list {
-        padding-bottom: 520px;
+        padding-bottom: 32.5rem;
     }
     .footer-block {
-        margin: 100px 0 50px;
+        margin: 6.25rem 0 3.125rem;
         flex-direction: row;
     }
 }
@@ -54,13 +54,13 @@
     }
     
     .hero-caption-block::before {
-        transform: translate(-440px, 0);
+        transform: translate(-27.5rem, 0);
     }
     .faq-block {
         flex-direction: row;
     }
     .faq-block img {
-        margin-top: 170px;
+        margin-top: 10.625rem;
     }
 }
 @media (min-width: 1280px) {
@@ -72,9 +72,4 @@
         padding: 0;
     }
     
-}
-@media (min-width: 1536px) {
-    /* .container {
-        max-width: 96rem;
-    } */
 }
